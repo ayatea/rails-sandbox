@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="box col-md-11 col-md-offset-1">
+    <label>Read_CSV_Result</label>
+    <pre>
+      <code>
+        <% @results.each.with_index(1) do |result, i| %>
+          <%= i %>行目 <%= result %>
+        <% end %>
+      </code>
+    </pre>
+  </div>
+</div>

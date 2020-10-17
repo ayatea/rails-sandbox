@@ -1,3 +1,9 @@
-// Place all the styles related to the files controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// コードブロックデザイン
+pre {
+  margin: 1em 0; //ブロック前後の余白
+  padding: 1em; // ブロック内の余白
+  border-radius: 5px; // 角丸
+  background: #25292f; // 背景色
+  color: #fff; // 文字色
+  white-space: pre-wrap; // はみ出したときに折り返す
+}
