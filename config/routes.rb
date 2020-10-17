@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :files, only: [:index] do
     collection do
       get :read_csv
+      get :read_xml
     end
   end
 end
