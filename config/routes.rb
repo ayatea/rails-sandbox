@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get :read_csv
       get :read_xml
+      get :read_xml_to_hash
     end
   end
 end

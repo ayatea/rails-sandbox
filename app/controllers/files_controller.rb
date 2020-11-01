@@ -14,4 +14,12 @@ class FilesController < ApplicationController
     xml = REXML::Document.new(File.new("#{Rails.root}/tmp/files/test_file.xml").read)
     @results = xml
   end
+
+  # 指定パスのXMLファイルを読み込んでHash形式にパースする
+  # @return [Hash] 読み込んだXMLデータ
+  def read_xml_to_hash
+    xml = REXML::Document.new(File.new("#{Rails.root}/tmp/files/test_file_2.xml").read)
+    xml_h = Hash.from_xml(xml.to_s)
+    @results= xml_h['items']['item']
+  end
 end
