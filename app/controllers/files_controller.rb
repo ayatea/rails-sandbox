@@ -9,9 +9,9 @@ class FilesController < ApplicationController
   end
 
   # 指定パスのXMLファイルを読み込む
-  # @return [Hash] 読み込んだXMLデータ
+  # @return [REXML::Document] 読み込んだXMLデータ
   def read_xml
-     xml = REXML::Document.new(File.new("#{Rails.root}/tmp/files/test_file.xml").read)
-     @results = Hash.from_xml(xml.to_s)
+    xml = REXML::Document.new(File.new("#{Rails.root}/tmp/files/test_file.xml").read)
+    @results = xml
   end
 end
